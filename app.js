@@ -12,6 +12,13 @@ import forgotPassword from './routes/forgotPassword.js'
 import news from './routes/news.js'
 import status from './routes/status.js'
 import notify from './routes/notify.js'
+import cors from 'cors'
+
+app.use(cors({
+    origin: 'https://it-activity-npru.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 
